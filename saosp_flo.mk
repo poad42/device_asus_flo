@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_mini_tablet_wifionly.mk)
+$(call inherit-product, vendor/simpleaosp/configs/common.mk)
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
@@ -23,7 +23,7 @@ $(call inherit-product, device/asus/flo/device.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := flo
-PRODUCT_NAME := lineage_flo
+PRODUCT_NAME := saosp_flo
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 7
 PRODUCT_MANUFACTURER := asus
