@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2011 The Android Open-Source Project
+# Copyright 2013 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,15 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+$(call inherit-product, device/asus/flo/aosp_flo.mk)
 
-TARGET_BOOTLOADER_BOARD_NAME := flo
-TARGET_BOOTLOADER_NAME := flo
-TARGET_BOARD_INFO_FILE := device/asus/flo/board-info.txt
-
-BOARD_HAL_STATIC_LIBRARIES := libdumpstate.flo
-
-TARGET_RELEASETOOLS_EXTENSIONS := device/asus/flo
-
-TARGET_RECOVERY_FSTAB = device/asus/flo/fstab.flo
-
-include device/asus/flo/BoardConfigCommon.mk
+PRODUCT_NAME := full_flo

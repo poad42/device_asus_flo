@@ -14,19 +14,19 @@
 # limitations under the License.
 #
 
-ifneq ($(filter flo deb,$(TARGET_DEVICE)),)
+# Sample: This is where we'd set a backup provider if we had one
+# $(call inherit-product, device/sample/products/backup_overlay.mk)
 
-LOCAL_PATH:= $(call my-dir)
 
-include $(CLEAR_VARS)
-LOCAL_SRC_FILES := addrloader.c
-LOCAL_C_INCLUDES := \
-	$(LOCAL_PATH) \
-	$(TARGET_OUT_HEADERS)/common/inc
-LOCAL_SHARED_LIBRARIES := libcutils liblog
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_OWNER := qcom
-LOCAL_MODULE := bdAddrLoader
-include $(BUILD_EXECUTABLE)
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
-endif
+PRODUCT_NAME := aosp_flo
+PRODUCT_DEVICE := flo
+PRODUCT_BRAND := Android
+PRODUCT_MODEL := AOSP on Flo
+PRODUCT_MANUFACTURER := ASUS
+
+# Inherit from hardware-specific part of the product configuration
+$(call inherit-product, device/asus/flo/device.mk)
+#$(call inherit-product-if-exists, vendor/qcom/proprietary/common/config/device-vendor.mk)
