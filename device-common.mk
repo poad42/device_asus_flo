@@ -143,10 +143,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	camera.disable_zsl_mode=1
 
-# Gello
-PRODUCT_PACKAGES += \
-	Gello
-
 #Enable MDP composition by default
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.hwc.mdpcomp.enable=true
