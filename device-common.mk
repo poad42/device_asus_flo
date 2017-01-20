@@ -49,18 +49,10 @@ TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1200
 TARGET_BOOTANIMATION_HALF_RES := true
 
-# Camera
-PRODUCT_PACKAGES += \
-    Snap
-
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images \
     charger_touch
-
-# Gello
-PRODUCT_PACKAGES += \
-    Gello
 
 # Graphics
 PRODUCT_PACKAGES += \
